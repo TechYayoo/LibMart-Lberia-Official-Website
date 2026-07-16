@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'none';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<title>LibMart — Fashion. Tech. Everything you need.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="/resources/css/styles.css">
+
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="logo">
+      <div class="logo-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 8h14l-1 12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 8Z" stroke="#F2A93B" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2" stroke="#F2A93B" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M12 12.2 12.8 14 14.7 14.2 13.3 15.5 13.7 17.3 12 16.4 10.3 17.3 10.7 15.5 9.3 14.2 11.2 14Z" fill="#F2A93B"/>
+        </svg>
+      </div>
+      <div class="logo-text"><span class="lib">Lib</span><span class="mart">Mart</span></div>
+    </div>
+    <nav class="links">
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="search-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9AA2AC" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="searchInput" type="text" placeholder="Search shirts, phones, boots…">
+    </div>
+    <button class="icon-btn" onclick="openCart()" aria-label="Open cart">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="1.8"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="dot"></span>Delivering across Monrovia &amp; beyond</div>
+    <h1>Everything Liberia needs, <span class="accent">in one cart.</span></h1>
+    <p>Clothing, electronics, phones, boots and more — sourced, stocked, and delivered fast. Shop the LibMart catalog and check out straight to WhatsApp.</p>
+    <div class="hero-actions">
+      <a href="#shop" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        Start shopping
+      </a>
+      <a href="#categories" class="btn btn-outline">Browse categories</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="float-card">
+      <div class="tile-icon" style="background:#378ADD"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="5" y="7" width="14" height="10" rx="1.5"/><path d="M8 7V5.5A2.5 2.5 0 0 1 10.5 3h3A2.5 2.5 0 0 1 16 5.5V7"/></svg></div>
+      <div class="label">Clothing</div>
+      <div class="sub">Shirts, dresses, jackets</div>
+    </div>
+    <div class="float-card">
+      <div class="tile-icon" style="background:#D85A30"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="7" y="2" width="10" height="18" rx="2"/><path d="M11 17h2"/></svg></div>
+      <div class="label">Phones</div>
+      <div class="sub">New &amp; refurbished</div>
+    </div>
+    <div class="float-card">
+      <div class="tile-icon" style="background:#1D9E75"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 17v3"/></svg></div>
+      <div class="label">Electronics</div>
+      <div class="sub">Laptops, audio, more</div>
+    </div>
+    <div class="float-card">
+      <div class="tile-icon" style="background:#F2A93B"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M6 3h4v6l3 3v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M10 9h5l3 3.5V15a2 2 0 0 1-2 2H10"/></svg></div>
+      <div class="label">Boots</div>
+      <div class="sub">Work, rain &amp; casual</div>
+    </div>
+  </div>
+</section>
+
+<div class="cat-strip" id="categories">
+  <button class="chip active" data-cat="all">All items</button>
+  <button class="chip" data-cat="clothing">Clothing</button>
+  <button class="chip" data-cat="electronics">Electronics</button>
+  <button class="chip" data-cat="phones">Phones</button>
+  <button class="chip" data-cat="boots">Boots</button>
+  <button class="chip" data-cat="accessories">Accessories</button>
+</div>
+
+<section class="section" id="shop">
+  <div class="section-head">
+    <h2>Shop the catalog</h2>
+    <span id="resultCount"></span>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <div class="logo-text" style="margin-bottom:10px;"><span class="lib">Lib</span><span class="mart">Mart</span></div>
+      <p>Liberia's online marketplace for clothing, electronics, phones, boots and everyday essentials. Quality goods, fair prices, fast delivery.</p>
+      <div class="social-row">
+        <a class="social-btn" href="https://www.facebook.com/share/1EhsWCsosF/" onclick="return true;" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M15 8.5h2V5.2c-.35-.05-1.53-.15-2.9-.15-2.87 0-4.83 1.75-4.83 4.97V13H6.5v3.7h2.77V23h3.7v-6.3h2.66l.42-3.7h-3.08V10.4c0-1.07.29-1.9 1.83-1.9Z"/></svg>
+        </a>
+        <a class="social-btn" href="#" onclick="return false;" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1"/></svg>
+        </a>
+        <a class="social-btn" href="https://wa.me/231555798912" onclick="return true;" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        </a>
+        <a class="social-btn" href="#" onclick="return false;" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M15 3v10.5a3.5 3.5 0 1 1-3-3.46"/><path d="M15 3c.3 2.4 2 4.2 4.4 4.5"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Shop</h3>
+      <a href="#categories">Clothing</a>
+      <a href="#categories">Electronics</a>
+      <a href="#categories">Phones</a>
+      <a href="#categories">Boots</a>
+    </div>
+    <div class="footer-col" id="contact">
+      <h3>Contact</h3>
+      <a href="#" onclick="return false;">WhatsApp: +231 555798912</a>
+      <a href="#" onclick="return false;">info@libmart.com</a>
+      <a href="#" onclick="return false;">Monrovia, Liberia</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 LibMart. Fashion. Tech. Everything you need.</span>
+    <span class="mono">@LibMart · Facebook · Instagram · TikTok</span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your cart</h3>
+    <button class="drawer-close" onclick="closeCart()" aria-label="Close cart">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14213D" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot">
+    <div class="subtotal-row">
+      <span>Subtotal</span>
+      <span style="text-align:right;">
+        <span class="mono" id="subtotal">LRD 0</span><br>
+        <span class="mono" id="subtotalUsd" style="font-size:12px; font-weight:500; color:var(--slate);">$0.00</span>
+      </span>
+    </div>
+    <button class="btn btn-primary" style="width:100%; justify-content:center;" onclick="checkoutWhatsApp()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+      Checkout via WhatsApp
+    </button>
+    <p class="checkout-note">Tapping checkout opens WhatsApp with your order pre-filled — just hit send and we'll confirm delivery details.</p>
+  </div>
+</div>
+
+<script src="/resources/js/script.js">
+
+</script>
+
+</body>
+</html>
